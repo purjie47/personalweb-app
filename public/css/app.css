@@ -4612,15 +4612,25 @@ readers do not read off random characters that represent icons */
   min-height: 650px;
 }
 
+/* Extra small devices */
+
+@media only screen and (max-width: 600px) {
+  .row-content {
+    min-height: 500px;
+    margin-top: 100px;
+  }
+}
+
 .my-photo {
   box-shadow: none;
   overflow: hidden;
+  width: 100%;
 }
 
 .my-name {
   font-family: "Montserrat", sans-serif;
-  font-size: 100px;
-  line-height: 95px;
+  font-size: 40px;
+  line-height: 35px;
   color: #232323;
 }
 
@@ -4636,42 +4646,6 @@ readers do not read off random characters that represent icons */
   font-size: 30px;
   line-height: 20px;
   font-weight: bold;
-}
-
-/* Extra small devices (phones, 600px and down) */
-
-@media only screen and (max-width: 600px) {
-  .row-content {
-    min-height: 500px;
-    margin-top: 100px;
-  }
-
-  .my-photo {
-    box-shadow: none;
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .my-name {
-    font-family: "Montserrat", sans-serif;
-    font-size: 40px;
-    line-height: 35px;
-    color: #232323;
-  }
-
-  .my-name strong {
-    border-bottom: 3px solid #ff214f;
-  }
-
-  .caption {
-    font-family: "Montserrat", sans-serif;
-    margin-top: 30px;
-    letter-spacing: 2px;
-    color: #939393;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: bold;
-  }
 }
 
 .title-section strong {
@@ -4708,8 +4682,61 @@ h6 {
   border-radius: 40px !important;
 }
 
+.btn-myresume:hover {
+  background-color: aqua;
+}
+
 .fa-contact-custom {
   color: #ff214f;
+}
+
+#wrapper {
+  overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: #3490dc !important;
+  border-color: #3490dc;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
 }
 
 /*!
